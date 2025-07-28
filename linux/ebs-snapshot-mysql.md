@@ -17,3 +17,5 @@ dnf install mariadb105-server -y
 systemctl start mariadb
 ```
 - now 'ls /var/lib/mysql' ---> should see the data
+
+- mariadb data is in a separate volume, so if the volume is corrupted can be restored from a snapshot
