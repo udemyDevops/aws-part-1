@@ -18,4 +18,9 @@ systemctl start mariadb
 ```
 - now 'ls /var/lib/mysql' ---> should see the data
 
-- mariadb data is in a separate volume, so if the volume is corrupted can be restored from a snapshot
+- mariadb data is in a separate volume, so if the data is lost/corrupted can be restored from a snapshot
+* To restore the data from snapshot
+  - unmount the directory
+  - Create a volume from snapshot
+  - detach the old volume (corrupted) and delete it
+  - attach to ec2 and mount it to the directory
