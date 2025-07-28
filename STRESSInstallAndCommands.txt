@@ -11,10 +11,14 @@ sudo yum install stress -y
 sudo apt update
 sudo apt install stress -y
 
-# stress command
+# stress command -- add it as a script (stress.sh)
 stress -c 4 -t 60 && sleep 60 && stress -c 4 -t 60 && sleep 60 && stress -c 4 -t 360 && sleep  && stress -c 4 -t 460 && sleep 30 && stress -c 4 -t 360 && sleep 60
 
 * To run the stress command in the background add 'nohup' at the beginning of stress command
 ```
-nohup stress -c 4 -t 300
+nohup stress -c 4 -t 300 &
+```
+- if running as script
+```
+nohup <path of script file> &
 ```
